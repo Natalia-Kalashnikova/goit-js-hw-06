@@ -11,10 +11,29 @@
  * його з масиву товарів у приватній властивості items об'єкта.
 */
 
+// class Storage{
+//   #items;
+
+//   constructor(items) {
+//     this.#items = items;
+// }
+//   getItems() {
+//     return this.#items;
+//   }
+//   addItem(newItem) {
+//     this.#items.push(newItem);
+//   }
+//   removeItem(itemToRemove) {
+//     this.#items = this.#items.filter(item => item !==itemToRemove);
+//   }
+// }
+
+/** Improvments (щоб обробити випадки, коли аргумент не передається)*/
+
 class Storage{
   #items;
 
-  constructor(items) {
+  constructor(items = []) {
     this.#items = items;
 }
   getItems() {

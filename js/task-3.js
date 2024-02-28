@@ -12,6 +12,28 @@
  * значення приватної властивості value об'єкта, який викликає цей метод.
 */
 
+// class StringBuilder {
+//   #value;
+
+//   constructor(initialValue) {
+//     this.#value = initialValue;
+//   }
+//   getValue() {
+//   return this.#value;
+//   }
+//   padEnd(str) {
+//    this.#value += str;
+//   }
+//   padStart(str) {
+//     this.#value = str + this.#value;
+//   }
+//   padBoth(str) {
+//     this.#value = str + this.#value + str;
+//   }
+// }
+
+/**Improvments (Використання шаблонних літералів)*/
+
 class StringBuilder {
   #value;
 
@@ -25,10 +47,10 @@ class StringBuilder {
    this.#value += str;
   }
   padStart(str) {
-    this.#value = str + this.#value;
+    this.#value = `${str}${this.#value}`;
   }
   padBoth(str) {
-    this.#value = str + this.#value + str;
+    this.#value = `${str}${this.#value}${str}`;
   }
 }
 
